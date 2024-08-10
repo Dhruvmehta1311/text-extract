@@ -20,7 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
         Tesseract.recognize(imgSrc, "eng", {
           logger: (m) => console.log(m),
         }).then(({ data: { text } }) => {
-          paragraph.value = text;
+          const cleanedText = text.replace(/[^a-zA-Z0-9\s]/g, " ").trim();
+          paragraph.value = cleanedText;
         });
       };
     }

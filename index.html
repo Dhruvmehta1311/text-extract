@@ -26,7 +26,9 @@
         class="bg-stone-200 max-w-[550px] mx-auto p-6 rounded-md flex flex-col gap-2 items-center justify-center"
       >
         <h1 class="font-semibold text-xl">Upload an Image to Extract Text</h1>
-        <div class="w-full flex justify-center">
+        <div
+          class="w-full flex flex-col items-center justify-center gap-2 pt-4"
+        >
           <input
             class="text-sm"
             type="file"
@@ -39,16 +41,14 @@
             for="fileInput"
             >Choose File</label
           >
-        </div>
-        <br /><br />
-        <div class="w-full flex items-center justify-center">
           <img
             id="image"
             src=""
             alt="Uploaded Image"
-            class="hidden w-[200px]"
+            class="hidden h-[300px]"
           />
         </div>
+        <br /><br />
         <div class="text-left w-full">
           <p class="">Text in Above Image is:</p>
         </div>
