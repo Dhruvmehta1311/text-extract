@@ -27,7 +27,18 @@
       >
         <h1 class="font-semibold text-xl">Upload an Image to Extract Text</h1>
         <div class="w-full flex justify-center">
-          <input class="text-sm" type="file" id="fileInput" accept="image/*" />
+          <input
+            class="text-sm"
+            type="file"
+            id="fileInput"
+            accept="image/*"
+            hidden
+          />
+          <label
+            class="bg-black px-4 py-2 text-white rounded-md cursor-pointer"
+            for="fileInput"
+            >Choose File</label
+          >
         </div>
         <br /><br />
         <div class="w-full flex items-center justify-center">
