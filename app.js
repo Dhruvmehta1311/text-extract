@@ -17,11 +17,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const imgSrc = image.src;
         image.classList.remove("hidden");
 
-        Tesseract.recognize(imgSrc, "eng", {
+        Tesseract.recognize(imgSrc, "eng+hin", {
           logger: (m) => console.log(m),
         }).then(({ data: { text } }) => {
-          const cleanedText = text.replace(/[^a-zA-Z0-9\s]/g, " ").trim();
-          paragraph.value = cleanedText;
+          paragraph.value = text;
         });
       };
     }
